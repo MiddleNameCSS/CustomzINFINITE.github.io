@@ -3,12 +3,12 @@
    Slider
 
 -------*/
-.customz-slider .carousel-inner > .active,
-.customz-slider .carousel-inner > .next,
-.customz-slider .carousel-inner > .prev {
+.mbr-slider .carousel-inner > .active,
+.mbr-slider .carousel-inner > .next,
+.mbr-slider .carousel-inner > .prev {
 	display: table;
 }
-.customz-slider .carousel-control {
+.mbr-slider .carousel-control {
     background-image: none;
     width: 54px;
     height: 54px;
@@ -23,21 +23,21 @@
     -o-transition: all 0.2s ease-in-out 0s;
     transition: all 0.2s ease-in-out 0s;
 }
-.customz-slider .carousel-control.left {
+.mbr-slider .carousel-control.left {
 	margin-left: 20px;
 }
-.customz-slider .carousel-control.right {
+.mbr-slider .carousel-control.right {
 	margin-right: 20px;
 }
-.customz-slider .carousel-control:hover {
+.mbr-slider .carousel-control:hover {
 	background: #fff;
 	color: #000;
 }
-.customz-slider .carousel-indicators {
+.mbr-slider .carousel-indicators {
     bottom: 20px;
 }
-.customz-slider .carousel-indicators li,
-.customz-slider .carousel-indicators .active {
+.mbr-slider .carousel-indicators li,
+.mbr-slider .carousel-indicators .active {
     width: 15px;
     height: 15px;
     margin: 3px;
@@ -45,36 +45,36 @@
 }
 
 @media (max-width: 767px) {
-    .customz-slider .carousel-control {
+    .mbr-slider .carousel-control {
         top: auto;
         bottom: 20px;
     }
 }
-.customz-slider .customz-overlay {
+.mbr-slider .mbr-overlay {
     z-index: 0;
     opacity:0.5;
 }
 /* boxed model */
-.customz-slider > .boxed-slider {
+.mbr-slider > .boxed-slider {
     position: relative;
     padding: 93px 0;
 }
-.customz-slider > .boxed-slider > div{
+.mbr-slider > .boxed-slider > div{
     position: relative;
 
 }
-.customz-slider > .container .carousel-indicators {
+.mbr-slider > .container .carousel-indicators {
     margin-bottom: 3px;
 }
 @media (max-width: 767px) {
-    .customz-slider > .container .carousel-control {
+    .mbr-slider > .container .carousel-control {
         margin-bottom: 0px;
     }
 }
-.customz-slider > .container img {
+.mbr-slider > .container img {
     width: 100%;
 }
-.customz-slider > .container img + .row {
+.mbr-slider > .container img + .row {
     position: absolute;
     top: 50%;
     left: 0;
@@ -85,16 +85,16 @@
     -moz-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-.customz-slider .customz-section {
+.mbr-slider .mbr-section {
     padding-left: 0;
     padding-right: 0;
 }
 
 /* article layout */
-.customz-slider .article-slider > div {
+.mbr-slider .article-slider > div {
     padding-left: 0;
     padding-right: 0;
 }
-.customz-slider > .container.article-slider .carousel-indicators {
+.mbr-slider > .container.article-slider .carousel-indicators {
     margin-bottom: 0;
 }

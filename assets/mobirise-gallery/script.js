@@ -3,9 +3,9 @@
     /* Masonry Grid */
     $(document).on('add.cards change.cards', function(event) {
         if(typeof $.fn.masonry !== 'undefined') {
-            $(event.target).outerFind('.customz-gallery').each(function() {
-                var $msnr = $(this).find('.customz-gallery-row').masonry({
-                    itemSelector: '.customz-gallery-item',
+            $(event.target).outerFind('.mbr-gallery').each(function() {
+                var $msnr = $(this).find('.mbr-gallery-row').masonry({
+                    itemSelector: '.mbr-gallery-item',
                     percentPosition: true
                 });
 
@@ -28,7 +28,7 @@
 
     /* Lightbox Fit */
     function fitLightbox() {
-        var $lightbox = $('.customz-gallery .modal');
+        var $lightbox = $('.mbr-gallery .modal');
         if(!$lightbox.length) {
             return;
         }
