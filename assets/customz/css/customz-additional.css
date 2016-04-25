@@ -1,0 +1,181 @@
+@import url(https://fonts.googleapis.com/css?family=Lora:400,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Bitter:400,700);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
+
+
+
+
+
+
+
+
+
+
+
+
+#menu-5 .customz-brand__name {
+  font-size: 16px;
+}
+#menu-5.customz-navbar--stuck .customz-navbar__section {
+  background: #000000;
+}
+#menu-5 .customz-navbar__hamburger {
+  color: #ffffff;
+}
+#menu-5 .customz-brand__name a {
+  font-size: 16px;
+  font-family: 'Lora', serif;
+}
+#menu-5 .customz-navbar__items a {
+  font-family: 'Lora', serif;
+  font-size: 16px;
+}
+#slider-23 H1 {
+  font-family: 'Lora', serif;
+}
+#slider-23 P {
+  font-family: 'Montserrat', sans-serif;
+}
+#slider-23 .btn {
+  font-family: 'Bitter', serif;
+  font-size: 16px;
+}
+#content5-24 .customz-header .customz-header__text {
+  text-align: center;
+  color: #fff;
+  font-family: 'Lora', serif;
+  font-size: 25px;
+}
+#content5-24 .customz-header .customz-header__subtext {
+  text-align: center;
+  color: #fff;
+}
+#content5-24 .customz-article {
+  color: #fff;
+}
+#content5-24 .customz-article P {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+#msg-box3-28 .customz-header .customz-header__text {
+  text-align: center;
+  font-family: 'Lora', serif;
+  color: #efefef;
+}
+#msg-box3-28 .customz-header .customz-header__subtext {
+  text-align: center;
+}
+#msg-box3-28 .customz-article P {
+  font-family: 'PT Sans', sans-serif;
+  text-align: center;
+}
+#msg-box3-28 .customz-article H3 {
+  color: #1abc9c;
+}
+#testimonials1-29 .customz-section__header {
+  color: #ffffff;
+}
+#form1-32 .customz-header__text {
+  color: #ffffff;
+  font-family: 'Lora', serif;
+  font-size: 30px;
+}
+#form1-32 .btn {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+#contacts2-16 STRONG {
+  font-family: 'Lora', serif;
+  font-size: 18px;
+  text-align: center;
+  color: #252525;
+}
+#contacts2-16 P {
+  color: #efefef;
+}
+
+
+
+
+
+
+
+
+
+
+#menu-22 .customz-brand__name {
+  font-size: 16px;
+}
+#menu-22.customz-navbar--stuck .customz-navbar__section {
+  background: #000000;
+}
+#menu-22 .customz-navbar__hamburger {
+  color: #ffffff;
+}
+#menu-22 .customz-brand__name a {
+  font-size: 16px;
+  font-family: 'Lora', serif;
+}
+#menu-22 .customz-navbar__items a {
+  font-family: 'Lora', serif;
+  font-size: 16px;
+}
+#content5-32 .customz-header .customz-header__text {
+  text-align: center;
+  color: #fff;
+  font-family: 'Lora', serif;
+}
+#content5-32 .customz-header .customz-header__subtext {
+  text-align: center;
+  color: #fff;
+}
+#content5-32 .customz-article {
+  color: #fff;
+}
+#content5-32 .customz-article P {
+  text-align: center;
+}
+#msg-box3-26 .customz-header .customz-header__text {
+  text-align: center;
+  font-family: 'Lora', serif;
+  color: #efefef;
+}
+#msg-box3-26 .customz-header .customz-header__subtext {
+  text-align: center;
+}
+#msg-box3-26 .customz-article P {
+  font-family: 'PT Sans', sans-serif;
+  text-align: center;
+}
+#msg-box3-26 .customz-article H3 {
+  color: #1abc9c;
+}
+#testimonials1-28 .customz-section__header {
+  color: #ffffff;
+}
+#pricing-table1-29 .btn {
+  font-family: 'Lora', serif;
+  font-size: 15px;
+}
+#pricing-table1-29 UL {
+  font-family: 'Montserrat', sans-serif;
+}
+#form1-30 .customz-header__text {
+  color: #ffffff;
+  font-family: 'Lora', serif;
+  font-size: 30px;
+}
+#form1-30 .btn {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+#contacts2-31 STRONG {
+  font-family: 'Lora', serif;
+  font-size: 18px;
+  text-align: center;
+  color: #252525;
+}
+#contacts2-31 P {
+  color: #efefef;
+}
