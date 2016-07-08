@@ -90,36 +90,36 @@
 
         $('html').addClass($.isMobile() ? 'mobile' : 'desktop');
 
-        // .mbr-navbar--sticky
+        // .customz-navbar--sticky
         $(window).scroll(function(){
-            $('.mbr-navbar--sticky').each(function(){
+            $('.customz-navbar--sticky').each(function(){
                 var method = $(window).scrollTop() > 10 ? 'addClass' : 'removeClass';
-                $(this)[method]('mbr-navbar--stuck')
-                    .not('.mbr-navbar--open')[method]('mbr-navbar--short');
+                $(this)[method]('customz-navbar--stuck')
+                    .not('.customz-navbar--open')[method]('customz-navbar--short');
             });
         });
 
-        // .mbr-hamburger
+        // .customz-hamburger
         $(document).on('add.cards change.cards', function(event){
-            $(event.target).outerFind('.mbr-hamburger:not(.mbr-added)').each(function(){
-                $(this).addClass('mbr-added')
+            $(event.target).outerFind('.customz-hamburger:not(.customz-added)').each(function(){
+                $(this).addClass('customz-added')
                     .click(function(){
                         $(this)
-                            .toggleClass('mbr-hamburger--open')
-                            .parents('.mbr-navbar')
-                            .toggleClass('mbr-navbar--open')
-                            .removeClass('mbr-navbar--short');
-                    }).parents('.mbr-navbar').find('a:not(.mbr-hamburger)').click(function(){
-                        $('.mbr-hamburger--open').click();
+                            .toggleClass('customz-hamburger--open')
+                            .parents('.customz-navbar')
+                            .toggleClass('customz-navbar--open')
+                            .removeClass('customz-navbar--short');
+                    }).parents('.customz-navbar').find('a:not(.customz-hamburger)').click(function(){
+                        $('.customz-hamburger--open').click();
                     });
             });
         });
         $(window).smartresize(function(){
             if ($(window).width() > 991)
-                $('.mbr-navbar--auto-collapse .mbr-hamburger--open').click();
+                $('.customz-navbar--auto-collapse .customz-hamburger--open').click();
         }).keydown(function(event){
             if (27 == event.which) // ESC
-                $('.mbr-hamburger--open').click();
+                $('.customz-hamburger--open').click();
         });
 
         if ($.isMobile() && navigator.userAgent.match(/Chrome/i)){ // simple fix for Chrome's scrolling
@@ -130,28 +130,28 @@
                     var windowHeight = $(window).height();
                     if ($.inArray(windowHeight, deviceSize) < 0)
                         windowHeight = deviceSize[ $(window).width() > windowHeight ? 1 : 0 ];
-                    $('.mbr-section--full-height').css('height', windowHeight + 'px');
+                    $('.customz-section--full-height').css('height', windowHeight + 'px');
                 });
             })($(window).width(), $(window).height());
-        } else if (!isSupportViewportUnits){ // fallback for .mbr-section--full-height
+        } else if (!isSupportViewportUnits){ // fallback for .customz-section--full-height
             $(window).smartresize(function(){
-                $('.mbr-section--full-height').css('height', $(window).height() + 'px');
+                $('.customz-section--full-height').css('height', $(window).height() + 'px');
             });
             $(document).on('add.cards', function(event){
-                if ($('html').hasClass('mbr-site-loaded') && $(event.target).outerFind('.mbr-section--full-height').length)
+                if ($('html').hasClass('customz-site-loaded') && $(event.target).outerFind('.customz-section--full-height').length)
                     $(window).resize();
             });
         }
 
-        // .mbr-section--16by9 (16 by 9 blocks autoheight)
+        // .customz-section--16by9 (16 by 9 blocks autoheight)
         function calculate16by9(){
             $(this).css('height', $(this).parent().width() * 9 / 16);
         }
         $(window).smartresize(function(){
-            $('.mbr-section--16by9').each(calculate16by9);
+            $('.customz-section--16by9').each(calculate16by9);
         });
         $(document).on('add.cards change.cards', function(event){
-            var enabled = $(event.target).outerFind('.mbr-section--16by9');
+            var enabled = $(event.target).outerFind('.customz-section--16by9');
             if (enabled.length){
                 enabled
                     .attr('data-16by9', 'true')
@@ -164,30 +164,30 @@
         });
 
 
-        // .mbr-parallax-background
+        // .customz-parallax-background
         if ($.fn.jarallax && !$.isMobile()){
             $(document).on('destroy.parallax', function(event){
-                $(event.target).outerFind('.mbr-parallax-background')
+                $(event.target).outerFind('.customz-parallax-background')
                     .jarallax('destroy')
                     .css('position', '');
             });
             $(document).on('add.cards change.cards', function(event){
-                $(event.target).outerFind('.mbr-parallax-background')
+                $(event.target).outerFind('.customz-parallax-background')
                     .jarallax()
                     .css('position', 'relative');
             });
         }
 
-        // .mbr-social-likes
+        // .customz-social-likes
         if ($.fn.socialLikes){
             $(document).on('add.cards', function(event){
-                $(event.target).outerFind('.mbr-social-likes:not(.mbr-added)').on('counter.social-likes', function(event, service, counter){
+                $(event.target).outerFind('.customz-social-likes:not(.customz-added)').on('counter.social-likes', function(event, service, counter){
                     if (counter > 999) $('.social-likes__counter', event.target).html(Math.floor(counter / 1000) + 'k');
                 }).socialLikes({initHtml : false});
             });
         }
 
-        // .mbr-fixed-top
+        // .customz-fixed-top
         var fixedTopTimeout, scrollTimeout, prevScrollTop = 0, fixedTop = null, isDesktop = !$.isMobile();
         $(window).scroll(function(){
             if (scrollTimeout) clearTimeout(scrollTimeout);
@@ -221,7 +221,7 @@
                     fixedTop.fixed = false;
                     $(fixedTop.elm).removeClass('is-fixed');
                 }
-                $('.mbr-fixed-top:first').each(function(){
+                $('.customz-fixed-top:first').each(function(){
                     fixedTop = {
                         breakPoint : $(this).offset().top + $(this).height() * 3,
                         fixed : false,
@@ -232,7 +232,7 @@
             }, 650);
         });
 
-        // .mbr-google-map
+        // .customz-google-map
         var loadGoogleMap = function(){
             var $this = $(this), markers = [], coord = function(pos){
                 return new google.maps.LatLng(pos[0], pos[1]);
@@ -244,7 +244,7 @@
                 markerIcon : null,
                 showInfo   : true
             }, eval('(' + ($this.data('google-map-params') || '{}') + ')'));
-            $this.find('.mbr-google-map__marker').each(function(){
+            $this.find('.customz-google-map__marker').each(function(){
                 var coord = $(this).data('coordinates');
                 if (coord){
                     markers.push({
@@ -254,7 +254,7 @@
                         template : $(this).html('{{content}}').removeAttr('data-coordinates data-icon')[0].outerHTML
                     });
                 }
-            }).end().html('').addClass('mbr-google-map--loaded');
+            }).end().html('').addClass('customz-google-map--loaded');
             if (markers.length){
                 var map = this.Map = new google.maps.Map(this, {
                     scrollwheel : false,
@@ -301,7 +301,7 @@
         };
         $(document).on('add.cards', function(event){
             if (window.google && google.maps){
-                $(event.target).outerFind('.mbr-google-map').each(function(){
+                $(event.target).outerFind('.customz-google-map').each(function(){
                     loadGoogleMap.call(this);
                 });
             }
@@ -309,7 +309,7 @@
 
         // embedded videos
         $(window).smartresize(function(){
-            $('.mbr-embedded-video').each(function(){
+            $('.customz-embedded-video').each(function(){
                 $(this).height(
                     $(this).width() *
                     parseInt($(this).attr('height') || 315) /
@@ -318,7 +318,7 @@
             });
         });
         $(document).on('add.cards', function(event){
-            if ($('html').hasClass('mbr-site-loaded') && $(event.target).outerFind('iframe').length)
+            if ($('html').hasClass('customz-site-loaded') && $(event.target).outerFind('iframe').length)
                 $(window).resize();
         });
 
@@ -334,7 +334,7 @@
                         var previewURL = 'http' + ('https:' == location.protocol ? 's' : '') + ':';
                         previewURL += '//img.youtube.com/vi/' + result[1] + '/maxresdefault.jpg';
 
-                        var $img = $('<div class="mbr-background-video-preview">')
+                        var $img = $('<div class="customz-background-video-preview">')
                             .hide()
                             .css({
                                 backgroundSize: 'cover',
@@ -362,7 +362,7 @@
 
                         if ($.fn.YTPlayer && !$.isMobile()){
                             var params = eval('(' + ($(this).data('bg-video-params') || '{}') + ')');
-                            $('.container:eq(0)', this).before('<div class="mbr-background-video"></div>').prev()
+                            $('.container:eq(0)', this).before('<div class="customz-background-video"></div>').prev()
                                 .YTPlayer($.extend({
                                     videoURL : result[1],
                                     containment : 'self',
@@ -378,7 +378,7 @@
 
         // init
         $('body > *:not(style, script)').trigger('add.cards');
-        $('html').addClass('mbr-site-loaded');
+        $('html').addClass('customz-site-loaded');
         $(window).resize().scroll();
 
         // smooth scroll
@@ -386,7 +386,7 @@
             $(document).click(function(e){
                 try {
                     var target = e.target;
-                    if ($(target).parents().hasClass('mbr-gallery')) {
+                    if ($(target).parents().hasClass('customz-gallery')) {
                         return;
                     }
                     do {
@@ -395,7 +395,7 @@
                             $(useBody ? 'body' : target.hash).each(function(){
                                 e.preventDefault();
                                 // in css sticky navbar has height 64px 
-                                var stickyMenuHeight = $('.mbr-navbar--sticky').length ? 64 : 0;
+                                var stickyMenuHeight = $('.customz-navbar--sticky').length ? 64 : 0;
                                 var goTo = target.hash == '#bottom' 
                                         ? ($(this).height() - $(window).height())
                                         : ($(this).offset().top - stickyMenuHeight);
